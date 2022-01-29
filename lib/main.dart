@@ -16,10 +16,10 @@ class MyApp extends StatelessWidget {
       ),
       home: Scaffold(
         appBar: AppBar(
-          title: Text('Contacts'),
+          title: const Text('Contacts'),
         ),
-        backgroundColor: Color(0xFFFAFAFA),
-        body: ContactsPage(),
+        backgroundColor: const Color(0xFFFAFAFA),
+        body: const ContactsPage(),
       ),
     );
   }
