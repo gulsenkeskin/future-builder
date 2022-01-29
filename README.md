@@ -27,7 +27,7 @@ FutureBuilders'ın nasıl kullanılacağına geçmeden önce, modelimizi, UI'miz
 
 ## Model
 
-Başlangıç ​​olarak Contact modelimizi tanımlayalım. Basit tutmak birkaç veri alacağız.
+Başlangıç olarak Contact modelimizi tanımlayalım. Basit tutmak birkaç veri alacağız.
 
 
 ```
@@ -324,10 +324,6 @@ Artık tüm parçalarımızı yerleştirdiğimize göre, uygulamamızın nasıl 
 Başlangıçta 10 saniye boyunca görülebilen bir yükleme ekranımız var ve ardından bunun yerini ListView.builder() alıyor. Farklı bağlantı durumlarına göre ek ekranlarımız olabilir, ancak basitlik için 2 ekrana bağlı kalacağız.
 
 Zaman uyumsuz programlamanın nasıl çalıştığına baktık ve FutureBuilder yönteminin nasıl çalıştığını göstermek için basit bir kişi uygulaması tasarladık ve oluşturduk. Ayrıca Future'ı neden build yönteminde değil de initState() içinde elde etmemiz gerektiğine baktık. Ve son olarak, oluşturucumuzda ConnectionState enumlarının nasıl kullanılacağını gördük.
-
-Kodun tamamını [buradan] (https://github.com/gulsenkeskin/future_builder) inceleyebilirsiniz.
-
-
 
 
 References: 
