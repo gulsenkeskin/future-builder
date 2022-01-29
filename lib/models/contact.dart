@@ -1,13 +1,13 @@
 class Contact {
-  final String? firstName;
-  final String? lastName;
-  final String? imageUrl;
-  final String? phone;
+  final String firstName;
+  final String lastName;
+  final String imageUrl;
+  final String phone;
 
   Contact({
-    this.firstName,
-    this.lastName,
-    this.imageUrl,
-    this.phone,
+    required this.firstName,
+    required this.lastName,
+    required this.imageUrl,
+    required this.phone,
   });
 }
