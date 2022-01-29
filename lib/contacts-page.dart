@@ -20,6 +20,12 @@ class _ContactsPageState extends State<ContactsPage> {
   }
 
   @override
+  void initState() {
+    super.initState();
+    _contacts = _getContacts();
+  }
+
+  @override
   Widget build(BuildContext context) {
     return Container();
   }
