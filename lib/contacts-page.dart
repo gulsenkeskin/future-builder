@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import 'contact-card.dart';
 import 'dummydata.dart';
 import 'models/contact.dart';
 
@@ -27,6 +28,38 @@ class _ContactsPageState extends State<ContactsPage> {
 
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return FutureBuilder<List<Contact>>(
+      future: _contacts,
+      builder: (ctx, snapshot) {
+        List<Contact>? contacts = snapshot.data;
+        switch (snapshot.connectionState) {
+          case ConnectionState.done:
+            return _buildListView(contacts!);
+          default:
+            return _buildLoadingScreen();
+        }
+      },
+    );
+  }
+
+  Widget _buildListView(List<Contact> contacts) {
+    return ListView.builder(
+      itemBuilder: (ctx, idx) {
+        return ContactCard(
+          contact: contacts[idx],
+        );
+      },
+      itemCount: contacts.length,
+    );
+  }
+
+  Widget _buildLoadingScreen() {
+    return Center(
+      child: Container(
+        width: 50,
+        height: 50,
+        child: CircularProgressIndicator(),
+      ),
+    );
   }
 }
