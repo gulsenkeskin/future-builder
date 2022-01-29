@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'models/contact.dart';
 
 class ContactCard extends StatelessWidget {
-  final Contact contact;
-  const ContactCard({Key? key, required this.contact}) : super(key: key);
+  final Contact? contact;
+  const ContactCard({Key? key, this.contact}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -24,7 +24,7 @@ class ContactCard extends StatelessWidget {
             padding: const EdgeInsets.only(top: 10, right: 15, bottom: 10),
             child: ClipOval(
               child: Image.network(
-                contact.imageUrl,
+                contact!.imageUrl!,
                 width: 50,
                 height: 50,
               ),
@@ -34,9 +34,9 @@ class ContactCard extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text('${contact.firstName} ${contact.lastName}'),
+                Text('${contact!.firstName} ${contact!.lastName}'),
                 const SizedBox(height: 2),
-                Text('${contact.phone}'),
+                Text('${contact!.phone}'),
               ],
             ),
           ),
