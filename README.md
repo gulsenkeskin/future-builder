@@ -1,6 +1,6 @@
 # future_builder
  
- <img src='gif/1.gif'  width="340" height="680">
+ <img src='gif/1.gif' width="340" height="680">
  
 Flutter'daki FutureBuilder widget'ına bir göz atacağız. Başlamadan önce, bir adım geriye gidelim ve Flutter'da Futures'ın ne olduğunu ve asenkron programlama ile nasıl çalışılacağını anlayalım.
 
